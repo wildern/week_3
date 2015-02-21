@@ -12,10 +12,42 @@ class Box
 	there have to be get_area() method
 =end
 	# write your code here
+  def initialize(width, height)
+    @width = width
+    @height = height
+  end
+  
+  attr_accessor :width, :height
+  
+  def get_width()
+    return @width
+  end
+  
+  def get_height()
+    return @height
+  end
+  
+  def get_area()
+    return @width*@height
+  end
 end
 
 
 #TODO SmallBox
 #			override get_area() method
+
+class SmallBox < Box
+  
+  def get_area()
+    return "Area of small box is equal to: " + (@width*@height).to_s
+  end
+end
+
 #TODO BigBox
 #			override get_area() method
+
+class BigBox < Box
+  def get_area()
+    return "Area of big box is equal to: " + (@width*@height).to_s
+  end
+end
